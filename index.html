@@ -244,6 +244,37 @@
             background: #f9f9f9;
         }
         
+        /* Results Section */
+        .results {
+            background: linear-gradient(135deg, #3498db 0%, #2c3e50 100%);
+            color: white;
+            text-align: center;
+        }
+        
+        .results h2 {
+            color: white;
+        }
+        
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .result-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .result-number {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
         /* Testimonials */
         .testimonials {
             background: #f1f8ff;
@@ -281,37 +312,6 @@
             background-position: center;
             margin-right: 15px;
             flex-shrink: 0;
-        }
-        
-        /* Sales Proof Section */
-        .sales-proof {
-            background: linear-gradient(135deg, #3498db 0%, #2c3e50 100%);
-            color: white;
-            text-align: center;
-        }
-        
-        .sales-proof h2 {
-            color: white;
-        }
-        
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-            overflow: hidden;
-            max-width: 800px;
-            margin: 40px auto;
-            border-radius: 10px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-        }
-        
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border-radius: 10px;
         }
         
         /* Social Media */
@@ -452,8 +452,8 @@
                     <li><a href="#services">Services</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#process">Process</a></li>
+                    <li><a href="#results">Results</a></li>
                     <li><a href="#testimonials">Testimonials</a></li>
-                    <li><a href="#sales">Results</a></li>
                 </ul>
             </nav>
         </div>
@@ -598,18 +598,37 @@
         </div>
     </section>
 
-    <!-- Sales Proof Section -->
-    <section class="sales-proof" id="sales">
+    <!-- Results Section -->
+    <section class="results" id="results">
         <div class="container">
-            <h2>See Our Results in Action</h2>
-            <p>Watch how we've helped Shopify stores increase their traffic and sales</p>
+            <h2>Proven Results</h2>
+            <p>We deliver measurable improvements for Shopify stores</p>
             
-            <div class="video-container">
-                <iframe src="https://www.tiktok.com/embed/v2/7531306218678127928" frameborder="0" allowfullscreen></iframe>
+            <div class="results-grid">
+                <div class="result-card">
+                    <div class="result-number">187%</div>
+                    <h3>Traffic Increase</h3>
+                    <p>Average organic traffic growth for our clients</p>
+                </div>
+                
+                <div class="result-card">
+                    <div class="result-number">230%</div>
+                    <h3>Sales Growth</h3>
+                    <p>Average increase in organic revenue</p>
+                </div>
+                
+                <div class="result-card">
+                    <div class="result-number">94%</div>
+                    <h3>Client Satisfaction</h3>
+                    <p>Clients who report excellent results</p>
+                </div>
+                
+                <div class="result-card">
+                    <div class="result-number">3.2x</div>
+                    <h3>ROI</h3>
+                    <p>Average return on investment for our services</p>
+                </div>
             </div>
-            
-            <p>This is just one example of the results we've achieved for our clients.</p>
-            <a href="https://www.tiktok.com/@happyecompro" class="btn" target="_blank">See More on TikTok</a>
         </div>
     </section>
 
@@ -712,7 +731,7 @@
                     <p><a href="#home">Home</a></p>
                     <p><a href="#services">Services</a></p>
                     <p><a href="#about">About</a></p>
-                    <p><a href="#sales">Results</a></p>
+                    <p><a href="#results">Results</a></p>
                 </div>
             </div>
             
