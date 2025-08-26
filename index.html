@@ -1,6 +1,6 @@
-# HappySEO Expert - Shopify SEO Agency Website
+# HappyEcomPro SEO - Shopify SEO Agency Website
 
-I'll create a complete single-page website for HappySEO Expert, focusing on Shopify SEO services with placeholder images and multiple sections.
+I'll create a complete single-page website for your Shopify SEO agency with placeholder images and multiple sections.
 
 ```html
 <!DOCTYPE html>
@@ -8,7 +8,7 @@ I'll create a complete single-page website for HappySEO Expert, focusing on Shop
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HappySEO Expert - Shopify SEO Specialists</title>
+    <title>HappyEcomPro SEO - Shopify SEO Experts</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         /* Global Styles */
@@ -16,7 +16,7 @@ I'll create a complete single-page website for HappySEO Expert, focusing on Shop
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Poppins', sans-serif;
         }
         
         body {
@@ -117,7 +117,9 @@ I'll create a complete single-page website for HappySEO Expert, focusing on Shop
         .hero {
             padding-top: 150px;
             padding-bottom: 100px;
-            background: linear-gradient(135deg, #3498db 0%, #2c3e50 100%);
+            background: linear-gradient(rgba(52, 152, 219, 0.8), rgba(44, 62, 80, 0.8)), url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1415&q=80');
+            background-size: cover;
+            background-position: center;
             color: white;
             text-align: center;
         }
@@ -157,12 +159,9 @@ I'll create a complete single-page website for HappySEO Expert, focusing on Shop
         .service-img {
             height: 200px;
             width: 100%;
-            background-color: #3498db;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 3rem;
+            background-color: #ddd;
+            background-size: cover;
+            background-position: center;
         }
         
         .service-content {
@@ -187,13 +186,10 @@ I'll create a complete single-page website for HappySEO Expert, focusing on Shop
         .about-image {
             flex: 1;
             height: 400px;
-            background-color: #3498db;
+            background: url('https://images.unsplash.com/photo-1533750349088-cd871a92f312?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');
+            background-size: cover;
+            background-position: center;
             border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 2rem;
         }
         
         /* Process Section */
@@ -226,6 +222,11 @@ I'll create a complete single-page website for HappySEO Expert, focusing on Shop
             margin: 0 auto 20px;
             font-size: 1.5rem;
             font-weight: bold;
+        }
+        
+        /* Additional Services */
+        .additional-services {
+            background: #f9f9f9;
         }
         
         /* Testimonials */
@@ -363,7 +364,7 @@ I'll create a complete single-page website for HappySEO Expert, focusing on Shop
     <header>
         <div class="container">
             <nav>
-                <div class="logo">Happy<span>SEO</span></div>
+                <div class="logo">Happy<span>EcomPro</span> SEO</div>
                 <ul class="nav-links">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#services">Services</a></li>
@@ -394,9 +395,7 @@ I'll create a complete single-page website for HappySEO Expert, focusing on Shop
             <div class="services-grid">
                 <!-- Service 1 -->
                 <div class="service-card">
-                    <div class="service-img">
-                        <i class="fas fa-search"></i>
-                    </div>
+                    <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
                     <div class="service-content">
                         <h3>Keyword Research</h3>
                         <p>We identify the most valuable keywords for your Shopify store that your target customers are actually searching for.</p>
@@ -406,9 +405,7 @@ I'll create a complete single-page website for HappySEO Expert, focusing on Shop
                 
                 <!-- Service 2 -->
                 <div class="service-card">
-                    <div class="service-img">
-                        <i class="fas fa-edit"></i>
-                    </div>
+                    <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
                     <div class="service-content">
                         <h3>On-Page Optimization</h3>
                         <p>We optimize every page of your Shopify store, from product pages to blog content, ensuring they're perfectly tuned for search engines.</p>
@@ -418,49 +415,11 @@ I'll create a complete single-page website for HappySEO Expert, focusing on Shop
                 
                 <!-- Service 3 -->
                 <div class="service-card">
-                    <div class="service-img">
-                        <i class="fas fa-link"></i>
-                    </div>
+                    <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1432888622747-4eb9a8f5a07a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
                     <div class="service-content">
                         <h3>Link Building</h3>
                         <p>We build high-quality backlinks from authoritative websites to increase your domain authority and search rankings.</p>
                         <p>Our strategic approach focuses on earning links from relevant industry sources that drive both SEO value and referral traffic.</p>
-                    </div>
-                </div>
-                
-                <!-- Service 4 -->
-                <div class="service-card">
-                    <div class="service-img">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <div class="service-content">
-                        <h3>Technical SEO</h3>
-                        <p>We optimize the technical foundation of your Shopify store for better crawling, indexing, and overall performance.</p>
-                        <p>This includes site speed optimization, mobile responsiveness, schema markup, and fixing any technical issues that may hinder your SEO progress.</p>
-                    </div>
-                </div>
-                
-                <!-- Service 5 -->
-                <div class="service-card">
-                    <div class="service-img">
-                        <i class="fas fa-shopping-cart"></i>
-                    </div>
-                    <div class="service-content">
-                        <h3>E-Commerce SEO</h3>
-                        <p>Specialized optimization for product pages, category structures, and conversion funnels unique to Shopify stores.</p>
-                        <p>We focus on maximizing visibility for commercial keywords and creating seamless paths to purchase for your customers.</p>
-                    </div>
-                </div>
-                
-                <!-- Service 6 -->
-                <div class="service-card">
-                    <div class="service-img">
-                        <i class="fas fa-file-alt"></i>
-                    </div>
-                    <div class="service-content">
-                        <h3>Content Strategy</h3>
-                        <p>We develop a content plan that attracts, engages, and converts your target audience through valuable, SEO-optimized content.</p>
-                        <p>Our approach includes blog content, buying guides, product descriptions, and informational resources that establish your authority.</p>
                     </div>
                 </div>
             </div>
@@ -472,15 +431,13 @@ I'll create a complete single-page website for HappySEO Expert, focusing on Shop
         <div class="container">
             <div class="about-content">
                 <div class="about-text">
-                    <h2>Why Choose HappySEO for Your Shopify Store?</h2>
+                    <h2>Why Choose HappyEcomPro SEO?</h2>
                     <p>We're a team of SEO specialists who understand the unique challenges and opportunities of optimizing Shopify stores for search engines.</p>
                     <p>With years of experience working exclusively with e-commerce businesses, we've developed proven strategies that drive measurable results.</p>
                     <p>Our approach combines technical expertise, content excellence, and continuous optimization to ensure your store reaches its full potential.</p>
                     <a href="#contact" class="btn">Talk to an Expert</a>
                 </div>
-                <div class="about-image">
-                    <i class="fas fa-users"></i>
-                </div>
+                <div class="about-image"></div>
             </div>
         </div>
     </section>
@@ -528,37 +485,31 @@ I'll create a complete single-page website for HappySEO Expert, focusing on Shop
             <div class="services-grid">
                 <!-- Additional Service 1 -->
                 <div class="service-card">
-                    <div class="service-img">
-                        <i class="fas fa-mobile-alt"></i>
-                    </div>
+                    <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1516387938699-a93567ec168e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
                     <div class="service-content">
-                        <h3>Mobile-First Optimization</h3>
-                        <p>With most shoppers browsing on mobile devices, we ensure your Shopify store delivers an exceptional mobile experience.</p>
-                        <p>We optimize for mobile page speed, usability, and Google's mobile-first indexing, which can significantly boost your rankings and conversions.</p>
+                        <h3>Content Strategy & Creation</h3>
+                        <p>We develop a comprehensive content plan that attracts, engages, and converts your target audience.</p>
+                        <p>Our team creates SEO-optimized product descriptions, blog content, buying guides, and informational resources that establish your store as an authority in your niche, driving organic traffic and increasing dwell time.</p>
                     </div>
                 </div>
                 
                 <!-- Additional Service 2 -->
                 <div class="service-card">
-                    <div class="service-img">
-                        <i class="fas fa-star"></i>
-                    </div>
+                    <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1563014959-7aaa83350992?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
                     <div class="service-content">
-                        <h3>Rich Snippets & Schema Markup</h3>
-                        <p>We implement structured data to help your products stand out in search results with rich snippets like ratings, prices, and availability.</p>
-                        <p>This enhanced visibility can dramatically increase click-through rates and attract more qualified buyers to your store.</p>
+                        <h3>Technical SEO Optimization</h3>
+                        <p>We optimize the technical foundation of your Shopify store for better crawling, indexing, and overall performance.</p>
+                        <p>This includes site speed optimization, mobile responsiveness, schema markup implementation, and fixing any technical issues that may hinder your SEO progress, ensuring search engines can properly index and rank your content.</p>
                     </div>
                 </div>
                 
                 <!-- Additional Service 3 -->
                 <div class="service-card">
-                    <div class="service-img">
-                        <i class="fas fa-globe"></i>
-                    </div>
+                    <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
                     <div class="service-content">
-                        <h3>International SEO</h3>
-                        <p>Planning to sell globally? We optimize your Shopify store for international markets with hreflang tags, localized content, and country-specific SEO strategies.</p>
-                        <p>Our approach helps you rank in different regions and languages, expanding your customer base beyond domestic borders.</p>
+                        <h3>E-Commerce SEO Specialization</h3>
+                        <p>We provide specialized optimization for product pages, category structures, and conversion funnels unique to Shopify stores.</p>
+                        <p>Our approach focuses on maximizing visibility for commercial keywords, optimizing product schema markup, and creating seamless paths to purchase that increase conversion rates from organic search traffic.</p>
                     </div>
                 </div>
             </div>
@@ -574,7 +525,7 @@ I'll create a complete single-page website for HappySEO Expert, focusing on Shop
             <div class="testimonial-grid">
                 <div class="testimonial-card">
                     <div class="testimonial-text">
-                        "HappySEO transformed our online store. Our organic traffic increased by 187% in just 4 months, and we're now ranking on page one for all our key product categories."
+                        "HappyEcomPro SEO transformed our online store. Our organic traffic increased by 187% in just 4 months, and we're now ranking on page one for all our key product categories."
                     </div>
                     <div class="testimonial-author">
                         <div class="author-avatar">
@@ -589,7 +540,7 @@ I'll create a complete single-page website for HappySEO Expert, focusing on Shop
                 
                 <div class="testimonial-card">
                     <div class="testimonial-text">
-                        "The team at HappySEO understands Shopify inside and out. They fixed technical issues we didn't even know we had and optimized our product pages for maximum visibility."
+                        "The team at HappyEcomPro SEO understands Shopify inside and out. They fixed technical issues we didn't even know we had and optimized our product pages for maximum visibility."
                     </div>
                     <div class="testimonial-author">
                         <div class="author-avatar">
@@ -604,7 +555,7 @@ I'll create a complete single-page website for HappySEO Expert, focusing on Shop
                 
                 <div class="testimonial-card">
                     <div class="testimonial-text">
-                        "After trying several SEO agencies, we finally found one that delivers real results. Our sales from organic search have increased by 230% since working with HappySEO."
+                        "After trying several SEO agencies, we finally found one that delivers real results. Our sales from organic search have increased by 230% since working with HappyEcomPro SEO."
                     </div>
                     <div class="testimonial-author">
                         <div class="author-avatar">
@@ -659,13 +610,13 @@ I'll create a complete single-page website for HappySEO Expert, focusing on Shop
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>HappySEO</h3>
+                    <h3>HappyEcomPro SEO</h3>
                     <p>Specialized SEO services for Shopify store owners. We help you rank higher, drive more traffic, and increase sales.</p>
                 </div>
                 
                 <div class="footer-section">
                     <h3>Contact Us</h3>
-                    <p><i class="fas fa-envelope"></i> info@happyseo.com</p>
+                    <p><i class="fas fa-envelope"></i> info@happyecompro.com</p>
                     <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
                     <p><i class="fas fa-map-marker-alt"></i> 123 SEO Street, Digital City</p>
                 </div>
@@ -680,7 +631,7 @@ I'll create a complete single-page website for HappySEO Expert, focusing on Shop
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2023 HappySEO Expert. All rights reserved.</p>
+                <p>&copy; 2023 HappyEcomPro SEO. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -688,16 +639,18 @@ I'll create a complete single-page website for HappySEO Expert, focusing on Shop
 </html>
 ```
 
-This complete single-page website for HappySEO Expert includes:
+This complete single-page website for HappyEcomPro SEO includes:
 
 1. A professional header with navigation
-2. An engaging hero section
-3. Comprehensive services section with 6 SEO services
-4. About section explaining their expertise
+2. An engaging hero section with background image
+3. Services section with 3 SEO services including Keyword Research with an image
+4. About section explaining their expertise with an image
 5. Process section showing their 4-step approach
-6. Three additional service sections as requested
+6. Three additional service sections as requested with detailed explanations
 7. Testimonials from satisfied clients
 8. Contact form for inquiries
 9. Footer with contact information
 
-The design is modern, responsive, and uses Font Awesome icons as placeholder images. All content is focused on explaining how each SEO service helps Shopify store owners improve their visibility and sales.
+The design is modern, responsive, and uses placeholder images from Unsplash. All content is focused on explaining how each SEO service helps Shopify store owners improve their visibility and sales.
+
+You can copy this code and save it as an HTML file, then open it in any web browser to see the complete website.
