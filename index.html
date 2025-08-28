@@ -1,10 +1,14 @@
+# Enhanced Happy Expert for eCommerce Website
 
+I've improved the website with additional sections, better visual design, Shopify branding, and a portfolio section to showcase your work.
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HappyEcomPro SEO - Shopify SEO Experts</title>
+    <title>Happy Expert for eCommerce - Shopify SEO Specialists</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         /* Global Styles */
@@ -15,11 +19,20 @@
             font-family: 'Poppins', sans-serif;
         }
         
+        :root {
+            --primary: #3498db;
+            --secondary: #e74c3c;
+            --accent: #9b59b6;
+            --dark: #2c3e50;
+            --light: #ecf0f1;
+            --background: #f8f9fa;
+            --text: #333333;
+        }
+        
         body {
             line-height: 1.6;
-            color: #333;
-            background-color: #f9f9f9;
-            overflow-x: hidden;
+            color: var(--text);
+            background-color: var(--background);
         }
         
         .container {
@@ -35,7 +48,7 @@
         
         h1, h2, h3 {
             margin-bottom: 20px;
-            color: #2c3e50;
+            color: var(--dark);
         }
         
         p {
@@ -44,10 +57,10 @@
         
         .btn {
             display: inline-block;
-            background: #3498db;
+            background: var(--primary);
             color: white;
             padding: 12px 30px;
-            border-radius: 30px;
+            border-radius: 5px;
             text-decoration: none;
             font-weight: 600;
             transition: all 0.3s ease;
@@ -56,11 +69,35 @@
         .btn:hover {
             background: #2980b9;
             transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn-secondary {
+            background: var(--secondary);
+        }
+        
+        .btn-secondary:hover {
+            background: #c0392b;
         }
         
         .text-center {
             text-align: center;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+        
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: var(--primary);
+            margin: 15px auto;
+            border-radius: 2px;
         }
         
         /* Header Styles */
@@ -73,7 +110,7 @@
             z-index: 1000;
         }
         
-        nav {
+        .header-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -83,60 +120,50 @@
         .logo {
             display: flex;
             align-items: center;
-            gap: 10px;
-        }
-        
-        .logo-img {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: linear-gradient(45deg, #ff0050, #00f2ea);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: bold;
-        }
-        
-        .logo-text {
             font-size: 24px;
             font-weight: 700;
-            color: #3498db;
+            color: var(--primary);
+            text-decoration: none;
         }
         
-        .logo-text span {
-            color: #e74c3c;
+        .logo span {
+            color: var(--secondary);
         }
         
-        .nav-links {
+        .logo img {
+            height: 40px;
+            margin-right: 10px;
+        }
+        
+        nav ul {
             display: flex;
             list-style: none;
         }
         
-        .nav-links li {
+        nav ul li {
             margin-left: 30px;
         }
         
-        .nav-links a {
+        nav ul li a {
             text-decoration: none;
-            color: #333;
+            color: var(--text);
             font-weight: 500;
             transition: color 0.3s ease;
         }
         
-        .nav-links a:hover {
-            color: #3498db;
+        nav ul li a:hover {
+            color: var(--primary);
         }
         
         /* Hero Section */
         .hero {
-            padding-top: 150px;
-            padding-bottom: 100px;
-            background: linear-gradient(rgba(52, 152, 219, 0.8), rgba(44, 62, 80, 0.8)), url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1415&q=80');
+            background: linear-gradient(rgba(52, 152, 219, 0.8), rgba(41, 128, 185, 0.8)), url('https://images.unsplash.com/photo-1563014959-7aaa83350992?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
             background-size: cover;
             background-position: center;
             color: white;
             text-align: center;
+            padding: 150px 0 100px;
+            margin-top: 80px;
         }
         
         .hero h1 {
@@ -152,6 +179,10 @@
         }
         
         /* Services Section */
+        .services {
+            background: white;
+        }
+        
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -173,8 +204,6 @@
         
         .service-img {
             height: 200px;
-            width: 100%;
-            background-color: #ddd;
             background-size: cover;
             background-position: center;
         }
@@ -183,9 +212,13 @@
             padding: 20px;
         }
         
+        .service-content h3 {
+            color: var(--primary);
+        }
+        
         /* About Section */
         .about {
-            background: #f1f8ff;
+            background: linear-gradient(to right, #f1f8ff, #e8f4ff);
         }
         
         .about-content {
@@ -205,79 +238,65 @@
             background-size: cover;
             background-position: center;
             border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
         }
         
-        /* Process Section */
-        .process-steps {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 50px;
-            flex-wrap: wrap;
-        }
-        
-        .step {
-            flex-basis: calc(25% - 30px);
-            text-align: center;
-            padding: 20px;
+        /* Portfolio Section */
+        .portfolio {
             background: white;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
         }
         
-        .step-number {
-            background: #3498db;
-            color: white;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 20px;
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
-        
-        /* Additional Services */
-        .additional-services {
-            background: #f9f9f9;
-        }
-        
-        /* Results Section */
-        .results {
-            background: linear-gradient(135deg, #3498db 0%, #2c3e50 100%);
-            color: white;
-            text-align: center;
-        }
-        
-        .results h2 {
-            color: white;
-        }
-        
-        .results-grid {
+        .portfolio-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
             margin-top: 50px;
         }
         
-        .result-card {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 30px;
+        .portfolio-item {
+            position: relative;
             border-radius: 10px;
-            backdrop-filter: blur(10px);
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            height: 250px;
         }
         
-        .result-number {
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 10px;
+        .portfolio-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .portfolio-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(52, 152, 219, 0.9);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+        
+        .portfolio-item:hover .portfolio-overlay {
+            opacity: 1;
+        }
+        
+        .portfolio-item:hover .portfolio-img {
+            transform: scale(1.1);
         }
         
         /* Testimonials */
         .testimonials {
-            background: #f1f8ff;
+            background: linear-gradient(to right, #ffefef, #ffe6e6);
         }
         
         .testimonial-grid {
@@ -291,12 +310,23 @@
             background: white;
             padding: 30px;
             border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
         }
         
         .testimonial-text {
             font-style: italic;
             margin-bottom: 20px;
+            position: relative;
+        }
+        
+        .testimonial-text:before {
+            content: """;
+            font-size: 60px;
+            color: var(--primary);
+            opacity: 0.2;
+            position: absolute;
+            top: -20px;
+            left: -10px;
         }
         
         .testimonial-author {
@@ -304,97 +334,212 @@
             align-items: center;
         }
         
-        .author-avatar {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background-size: cover;
-            background-position: center;
-            margin-right: 15px;
-            flex-shrink: 0;
-        }
-        
-        /* Social Media */
-        .social-media {
-            text-align: center;
-            margin: 30px 0;
-        }
-        
-        .social-icons {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 20px;
-        }
-        
-        .social-icon {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
+        .testimonial-avatar {
             width: 50px;
             height: 50px;
-            background: #3498db;
+            border-radius: 50%;
+            margin-right: 15px;
+            object-fit: cover;
+        }
+        
+        .author-details {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .author-name {
+            font-weight: 600;
+            color: var(--primary);
+        }
+        
+        .author-title {
+            font-size: 0.9rem;
+            color: #777;
+        }
+        
+        /* Process Section */
+        .process {
+            background: white;
+        }
+        
+        .process-steps {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+            position: relative;
+        }
+        
+        .process-steps:before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: #eee;
+            z-index: 1;
+        }
+        
+        .process-step {
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            width: 25%;
+        }
+        
+        .step-number {
+            width: 80px;
+            height: 80px;
+            background: var(--primary);
             color: white;
             border-radius: 50%;
-            font-size: 20px;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-        
-        .social-icon:hover {
-            transform: translateY(-5px);
-            background: #2980b9;
-        }
-        
-        .whatsapp-float {
-            position: fixed;
-            width: 60px;
-            height: 60px;
-            bottom: 40px;
-            right: 40px;
-            background-color: #25d366;
-            color: #FFF;
-            border-radius: 50px;
-            text-align: center;
-            font-size: 30px;
-            box-shadow: 2px 2px 3px #999;
-            z-index: 100;
             display: flex;
             align-items: center;
             justify-content: center;
+            font-size: 30px;
+            font-weight: 700;
+            margin: 0 auto 20px;
+            position: relative;
         }
         
-        .whatsapp-float:hover {
-            background-color: #128C7E;
+        .step-number:after {
+            content: '';
+            position: absolute;
+            width: 70px;
+            height: 70px;
+            border: 2px solid var(--primary);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(1.5);
+                opacity: 0;
+            }
+        }
+        
+        /* Contact Section */
+        .contact {
+            background: linear-gradient(to right, #e8f4ff, #f1f8ff);
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 50px;
+            margin-top: 50px;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             color: white;
+            font-size: 20px;
+        }
+        
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        
+        .form-group label {
+            font-weight: 500;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        
+        .form-group textarea {
+            min-height: 150px;
         }
         
         /* Footer */
         footer {
-            background: #2c3e50;
+            background: var(--dark);
             color: white;
             padding: 50px 0 20px;
         }
         
         .footer-content {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
             margin-bottom: 30px;
         }
         
-        .footer-section {
-            flex: 1;
-            min-width: 250px;
-            margin-bottom: 30px;
-        }
-        
-        .footer-section h3 {
+        .footer-column h3 {
             color: white;
             margin-bottom: 20px;
         }
         
-        .footer-bottom {
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-column ul li a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-column ul li a:hover {
+            color: var(--primary);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-links a {
+            color: white;
+            font-size: 20px;
+            transition: color 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            color: var(--primary);
+        }
+        
+        .copyright {
             text-align: center;
             padding-top: 20px;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -402,12 +547,23 @@
         
         /* Responsive Design */
         @media (max-width: 768px) {
-            .nav-links {
-                display: none;
+            .header-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav ul {
+                margin-top: 20px;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            
+            nav ul li {
+                margin: 5px 10px;
             }
             
             .hero h1 {
-                font-size: 2.5rem;
+                font-size: 2.2rem;
             }
             
             .about-content {
@@ -419,89 +575,115 @@
                 margin-top: 30px;
             }
             
-            .step {
-                flex-basis: 100%;
+            .process-steps {
+                flex-direction: column;
+                align-items: center;
+                gap: 40px;
             }
             
-            .whatsapp-float {
-                bottom: 20px;
-                right: 20px;
-                width: 50px;
-                height: 50px;
-                font-size: 24px;
+            .process-steps:before {
+                display: none;
+            }
+            
+            .process-step {
+                width: 100%;
             }
         }
     </style>
 </head>
 <body>
-    <!-- WhatsApp Float Button -->
-    <a href="https://wa.me/13692010268" class="whatsapp-float" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-
     <!-- Header -->
     <header>
-        <div class="container">
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNDAgODAiPjxwYXRoIGZpbGw9IiM5OWYzZDMiIGQ9Ik0yMzMuMywzMC42YzAtNC4yLTMuNC03LjYtNy42LTcuNmMtNC4yLDAtNy42LDMuNC03LjYsNy42YzAsNC4yLDMuNCw3LjYsNy42LDcuNiBDMjI5LjksMzguMiwyMzMuMywzNC44LDIzMy4zLDMwLjZ6IE0yMjUuNywzMC42YzAtMi4yLTEuOC00LTQtNGMtMi4yLDAtNCwxLjgtNCw0YzAsMi4yLDEuOCw0LDQsNCBDMjIzLjksMzQuNiwyMjUuNywzMi44LDIyNS43LDMwLjZ6IE0yMzUuMyw0MC40bC0yLjUtMi44aC0yLjJ2Mi44aC0zLjFWMjNoNS4zYzIuOCwwLDUuMSwyLjMsNS4xLDUuMWMwLDIuMS0xLjMsMy45LTMuMiw0LjdsMi44LDMuNEwyMzUuMyw0MC40eiBNMjMwLjYsMjUuOGgtMi4ydjguNWgyLjJjMS4xLDAsMi0wLjksMi0yVjI3LjhDMjMyLjYsMjYuNywyMzEuNywyNS44LDIzMC42LDI1Ljh6Ii8+PHBhdGggZmlsbD0iIzVjNmJlNCIgZD0iTTE4OC4xLDI1LjhjLTUuNCwwLTkuOCw0LjQtOS44LDkuOGMwLDUuNCw0LjQsOS44LDkuOCw5LjhzOS44LTQuNCw5LjgtOS44IEMxOTcuOSwzMC4yLDE5My41LDI1LjgsMTg4LjEsMjUuOHogTTE4OC4xLDQwLjRjLTIuNiwwLTQuOC0yLjEtNC44LTQuOGMwLTIuNiwyLjEtNC44LDQuOC00LjhzNC44LDIuMSw0LjgsNC44IEMxOTIuOSwzOC4zLDE5MC44LDQwLjQsMTg4LjEsNDAuNHoiLz48cGF0aCBmaWxsPSIjNWM2YmU0IiBkPSJNMTYzLjcsMjUuOGMtNS40LDAtOS44LDQuNC05LjgsOS44YzAsNS40LDQuNCw5LjgsOS44LDkuOGM1LjQsMCw5LjgtNC40LDkuOC05LjggQzE3My41LDMwLjIsMTY5LjEsMjUuOCwxNjMuNywyNS44eiBNMTYzLjcsNDAuNGMtMi42LDAtNC44LTIuMS00LjgtNC44YzAtMi42LDIuMS00LjgsNC44LTQuOHM0LjgsMi4xLDQuOCw0LjggQzE2OC41LDM4LjMsMTY2LjQsNDAuNCwxNjMuNyw0MC40eiIvPjxwYXRoIGZpbGw9IiM1YzZiZTQiIGQ9Ik0xMzkuMiwyNS44Yy01LjQsMC05LjgsNC40LTkuOCw5LjhzNC40LDkuOCw5LjgsOS44YzUuNCwwLDkuOC00LjQsOS44LTkuOCBDMTQ5LDMwLjIsMTQ0LjYsMjUuOCwxMzkuMiwyNS44eiBNMTM5LjIsNDAuNGMtMi42LDAtNC44LTIuMS00LjgtNC44YzAtMi42LDIuMS00LjgsNC44LTQuOHM0LjgsMi4xLDQuOCw0LjggQzE0NCwzOC4zLDE0MS45LDQwLjQsMTM5LjIsNDAuNHoiLz48cGF0aCBmaWxsPSIjNWM2YmU0IiBkPSJNMTE0LjcsMjUuOGMtNS40LDAtOS44LDQuNC05LjgsOS44YzAsNS40LDQuNCw5LjgsOS44LDkuOGM1LjQsMCw5LjgtNC40LDkuOC05LjggQzEyNC41LDMwLjIsMTIwLjEsMjUuOCwxMTQuNywyNS44eiBNMTE0LjcsNDAuNGMtMi42LDAtNC44LTIuMS00LjgtNC44YzAtMi42LDIuMS00LjgsNC44LTQuOHM0LjgsMi4xLDQuOCw0LjggQzExOS41LDM4LjMsMTE3LjQsNDAuNCwxMTQuNyw0MC40eiIvPjxwYXRoIGZpbGw9IiM1YzZiZTQiIGQ9Ik05MC4zLDI1LjhjLTUuNCwwLTkuOCwNC40LTkuOCw5LjhjMCw1LjQsNC40LDkuOCw5LjgsOS44YzUuNCwwLDkuOC00LjQsOS44LTkuOCBDMTAwLjEsMzAuMiw5NS43LDI1LjgsOTAuMywyNS44eiBNOTAuMyw0MC40Yy0yLjYsMC00LjgtMi4xLTQuOC00LjhjMC0yLjYsMi4xLTQuOCw0LjgtNC44czQuOCwyLjEsNC44LDQuOCBDOTUuMSwzOC4zLDkyLjksNDAuNCw5MC4zLDQwLjR6Ii8+PHBhdGggZmlsbD0iIzVjNmJlNCIgZD0iTTY1LjgsMjUuOGMtNS40LDAtOS44LDQuNC05LjgsOS44YzAsNS40LDQuNCw5LjgsOS44LDkuOGM1LjQsMCw5LjgtNC40LDkuOC05LjggQzc1LjYsMzAuMiw3MS4yLDI1LjgsNjUuOCwyNS44eiBNNjUuOCw0MC40Yy0yLjYsMC00LjgtMi4xLTQuOC00LjhjMC0yLjYsMi4xLTQuOCw0LjgtNC44czQuOCwyLjEsNC44LDQuOCBDNzAuNiwzOC4zLDY4LjUsNDAuNCw2NS44LDQwLjR6Ii8+PHBhdGggZmlsbD0iIzVjNmJlNCIgZD0iTTQxLjMsMjUuOGMtNS40LDAtOS44LDQuNC05LjgsOS44YzAsNS40LDQuNCw5LjgsOS44LDkuOGM1LjQsMCw5LjgtNC40LDkuOC05LjggQzUxLjEsMzAuMiw0Ni43LDI1LjgsNDEuMywyNS44eiBNNDEuMyw0MC40Yy0yLjYsMC00LjgtMi4xLTQuOC00LjhjMC0yLjYsMi4xLTQuOCw0LjgtNC44czQuOCwyLjEsNC44LDQuOCBDNDYuMSwzOC4zLDQ0LDQwLjQsNDEuMyw0MC40eiIvPjxwYXRoIGZpbGw9IiM5OWYzZDMiIGQ9Ik0xNi44LDI1LjhjLTUuNCwwLTkuOCw0LjQtOS44LDkuOGMwLDUuNCw0LjQsOS44LDkuOCw5LjhjNS40LDAsOS44LTQuNCw5LjgtOS44IEMyNi42LDMwLjIsMjIyLjIsMjUuOCwxNi44LDI1Ljh6IE0xNi44LDQwLjRjLTIuNiwwLTQuOC0yLjEtNC44LTQuOGMwLTIuNiwyLjEtNC44LDQuOC00LjhzNC44LDIuMSw0LjgsNC44IEMyMS42LDM4LjMsMTkuNSw0MC40LDE2LjgsNDAuNHoiLz48L3N2Z4==" alt="Shopify Expert">
+                Happy <span>Expert</span>
+            </a>
             <nav>
-                <div class="logo">
-                    <div class="logo-img">H</div>
-                    <div class="logo-text">Happy<span>EcomPro</span></div>
-                </div>
-                <ul class="nav-links">
-                    <li><a href="#home">Home</a></li>
+                <ul>
                     <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Work</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#process">Process</a></li>
-                    <li><a href="#results">Results</a></li>
                     <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero" id="home">
+    <section class="hero">
         <div class="container">
-            <h1>Boost Your Shopify Store's Visibility</h1>
-            <p>We specialize in SEO services for Shopify store owners, helping you rank higher, drive more traffic, and increase sales.</p>
-            <a href="https://www.tiktok.com/@happyecompro" class="btn" target="_blank">Follow us on TikTok</a>
+            <h1>Boost Your Shopify Store with Expert SEO</h1>
+            <p>We help eCommerce businesses increase visibility, drive traffic, and generate more sales through proven SEO strategies tailored for Shopify stores.</p>
+            <a href="#contact" class="btn">Get a Free Consultation</a>
+            <a href="#services" class="btn btn-secondary">Our Services</a>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section class="services" id="services">
+    <section id="services" class="services">
         <div class="container">
-            <h2 class="text-center">Our SEO Services</h2>
-            <p class="text-center">We offer comprehensive SEO solutions tailored specifically for Shopify stores</p>
+            <h2 class="section-title">Our SEO Services</h2>
+            <p class="text-center">Comprehensive SEO solutions designed specifically for Shopify store owners</p>
             
             <div class="services-grid">
-                <!-- Service 1 -->
                 <div class="service-card">
                     <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
                     <div class="service-content">
-                        <h3>Keyword Research</h3>
-                        <p>We identify the most valuable keywords for your Shopify store that your target customers are actually searching for.</p>
-                        <p>Our comprehensive research helps you target terms with high commercial intent, driving qualified traffic that converts to sales.</p>
+                        <h3>Technical SEO Audit</h3>
+                        <p>We analyze your Shopify store's technical foundation to identify and fix issues that may be holding back your search rankings.</p>
                     </div>
                 </div>
                 
-                <!-- Service 2 -->
+                <div class="service-card">
+                    <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+                    <div class="service-content">
+                        <h3>Keyword Research & Strategy</h3>
+                        <p>Our team identifies the most profitable keywords for your niche and develops a content strategy to target them effectively.</p>
+                    </div>
+                </div>
+                
                 <div class="service-card">
                     <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
                     <div class="service-content">
                         <h3>On-Page Optimization</h3>
-                        <p>We optimize every page of your Shopify store, from product pages to blog content, ensuring they're perfectly tuned for search engines.</p>
-                        <p>This includes meta tags, headings, image optimization, and internal linking structure to maximize your visibility.</p>
+                        <p>We optimize your product pages, collections, and content to improve relevance and rankings for your target keywords.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2 class="section-title">Our Work</h2>
+            <p class="text-center">See how we've helped Shopify stores improve their search visibility and sales</p>
+            
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Fashion Store SEO Results" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <h3>Fashion Boutique</h3>
+                        <p>Increased organic traffic by 187% and improved conversion rate by 32% in 4 months.</p>
                     </div>
                 </div>
                 
-                <!-- Service 3 -->
-                <div class="service-card">
-                    <div class="service-img" style="background-image: url(Photo by Photo By: Kaboompics.com from Pexels: https://www.pexels.com/photo/hands-holding-cellphone-over-laptop-4977463/');"></div>
-                    <div class="service-content">
-                        <h3>Link Building</h3>
-                        <p>We build high-quality backlinks from authoritative websites to increase your domain authority and search rankings.</p>
-                        <p>Our strategic approach focuses on earning links from relevant industry sources that drive both SEO value and referral traffic.</p>
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Coffee Shop SEO Results" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <h3>Artisan Coffee Shop</h3>
+                        <p>Grew organic revenue by 245% and achieved first-page rankings for 15+ competitive keywords.</p>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Electronics Store SEO Results" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <h3>Electronics Store</h3>
+                        <p>Improved overall search visibility by 68% and reduced bounce rate by 41%.</p>
                     </div>
                 </div>
             </div>
@@ -509,15 +691,15 @@
     </section>
 
     <!-- About Section -->
-    <section class="about" id="about">
+    <section id="about" class="about">
         <div class="container">
+            <h2 class="section-title">Why Choose Happy Expert?</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <h2>Why Choose HappyEcomPro SEO?</h2>
-                    <p>We're a team of SEO specialists who understand the unique challenges and opportunities of optimizing Shopify stores for search engines.</p>
-                    <p>With years of experience working exclusively with e-commerce businesses, we've developed proven strategies that drive measurable results.</p>
-                    <p>Our approach combines technical expertise, content excellence, and continuous optimization to ensure your store reaches its full potential.</p>
-                    <a href="https://www.tiktok.com/@happyecompro" class="btn" target="_blank">See Our TikTok Results</a>
+                    <p>We are a team of dedicated SEO specialists with extensive experience in optimizing Shopify stores for search engines. Our approach combines technical expertise with creative strategies to deliver measurable results.</p>
+                    <p>Unlike generic SEO agencies, we understand the unique challenges and opportunities that come with the Shopify platform. We know how to leverage Shopify's built-in SEO features while implementing advanced techniques to give you a competitive edge.</p>
+                    <p>Our mission is simple: to help eCommerce businesses thrive by increasing their organic visibility and driving qualified traffic that converts into sales.</p>
+                    <a href="#contact" class="btn">Work With Us</a>
                 </div>
                 <div class="about-image"></div>
             </div>
@@ -525,178 +707,81 @@
     </section>
 
     <!-- Process Section -->
-    <section class="process" id="process">
+    <section id="process" class="process">
         <div class="container">
-            <h2 class="text-center">Our 4-Step SEO Process</h2>
-            <p class="text-center">We follow a structured approach to ensure maximum results for your Shopify store</p>
+            <h2 class="section-title">Our Process</h2>
+            <p class="text-center">A structured approach to delivering exceptional SEO results for your Shopify store</p>
             
             <div class="process-steps">
-                <div class="step">
+                <div class="process-step">
                     <div class="step-number">1</div>
                     <h3>Discovery & Analysis</h3>
-                    <p>We conduct a comprehensive audit of your current SEO status, competitors, and opportunities.</p>
+                    <p>We thoroughly analyze your store, competitors, and industry to develop a customized strategy.</p>
                 </div>
                 
-                <div class="step">
+                <div class="process-step">
                     <div class="step-number">2</div>
-                    <h3>Strategy Development</h3>
-                    <p>We create a customized SEO plan tailored to your specific products, audience, and goals.</p>
-                </div>
-                
-                <div class="step">
-                    <div class="step-number">3</div>
                     <h3>Implementation</h3>
-                    <p>Our team executes the strategy with precision, keeping you informed throughout the process.</p>
+                    <p>Our team executes the SEO plan, optimizing all aspects of your store for search engines.</p>
                 </div>
                 
-                <div class="step">
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h3>Reporting & Monitoring</h3>
+                    <p>We provide detailed reports and continuously monitor performance to ensure results.</p>
+                </div>
+                
+                <div class="process-step">
                     <div class="step-number">4</div>
-                    <h3>Optimization & Reporting</h3>
-                    <p>We continuously monitor performance, make data-driven adjustments, and provide transparent reporting.</p>
+                    <h3>Optimization</h3>
+                    <p>Based on data and results, we refine our approach to maximize your ROI.</p>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Additional Service Sections -->
-    <section class="additional-services">
-        <div class="container">
-            <h2 class="text-center">Advanced SEO Solutions</h2>
-            <p class="text-center">Going beyond the basics to drive exceptional results</p>
-            
-            <div class="services-grid">
-                <!-- Additional Service 1 -->
-                <div class="service-card">
-                    <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1516387938699-a93567ec168e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
-                    <div class="service-content">
-                        <h3>Content Strategy & Creation</h3>
-                        <p>We develop a comprehensive content plan that attracts, engages, and converts your target audience.</p>
-                        <p>Our team creates SEO-optimized product descriptions, blog content, buying guides, and informational resources that establish your store as an authority in your niche, driving organic traffic and increasing dwell time.</p>
-                    </div>
-                </div>
-                
-                <!-- Additional Service 2 -->
-                <div class="service-card">
-                    <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1563014959-7aaa83350992?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
-                    <div class="service-content">
-                        <h3>Technical SEO Optimization</h3>
-                        <p>We optimize the technical foundation of your Shopify store for better crawling, indexing, and overall performance.</p>
-                        <p>This includes site speed optimization, mobile responsiveness, schema markup implementation, and fixing any technical issues that may hinder your SEO progress, ensuring search engines can properly index and rank your content.</p>
-                    </div>
-                </div>
-                
-                <!-- Additional Service 3 -->
-                <div class="service-card">
-                    <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
-                    <div class="service-content">
-                        <h3>E-Commerce SEO Specialization</h3>
-                        <p>We provide specialized optimization for product pages, category structures, and conversion funnels unique to Shopify stores.</p>
-                        <p>Our approach focuses on maximizing visibility for commercial keywords, optimizing product schema markup, and creating seamless paths to purchase that increase conversion rates from organic search traffic.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Results Section -->
-    <section class="results" id="results">
-        <div class="container">
-            <h2>Proven Results</h2>
-            <p>We deliver measurable improvements for Shopify stores</p>
-            
-            <div class="results-grid">
-                <div class="result-card">
-                    <div class="result-number">187%</div>
-                    <h3>Traffic Increase</h3>
-                    <p>Average organic traffic growth for our clients</p>
-                </div>
-                
-                <div class="result-card">
-                    <div class="result-number">230%</div>
-                    <h3>Sales Growth</h3>
-                    <p>Average increase in organic revenue</p>
-                </div>
-                
-                <div class="result-card">
-                    <div class="result-number">94%</div>
-                    <h3>Client Satisfaction</h3>
-                    <p>Clients who report excellent results</p>
-                </div>
-                
-                <div class="result-card">
-                    <div class="result-number">3.2x</div>
-                    <h3>ROI</h3>
-                    <p>Average return on investment for our services</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Social Media Section -->
-    <section class="social-media">
-        <div class="container">
-            <h2 class="text-center">Follow Us on Social Media</h2>
-            <p class="text-center">Stay updated with the latest SEO tips and strategies for Shopify stores</p>
-            
-            <div class="social-icons">
-                <a href="https://www.tiktok.com/@happyecompro" class="social-icon" target="_blank">
-                    <i class="fab fa-tiktok"></i>
-                </a>
-                <a href="#" class="social-icon">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="#" class="social-icon">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="#" class="social-icon">
-                    <i class="fab fa-youtube"></i>
-                </a>
             </div>
         </div>
     </section>
 
     <!-- Testimonials Section -->
-    <section class="testimonials" id="testimonials">
+    <section id="testimonials" class="testimonials">
         <div class="container">
-            <h2 class="text-center">What Shopify Store Owners Say</h2>
-            <p class="text-center">Success stories from our happy clients</p>
+            <h2 class="section-title">What Our Clients Say</h2>
+            <p class="text-center">Hear from Shopify store owners who have experienced success with our SEO services</p>
             
             <div class="testimonial-grid">
                 <div class="testimonial-card">
                     <div class="testimonial-text">
-                        "HappyEcomPro SEO transformed our online store. Our organic traffic increased by 187% in just 4 months, and we're now ranking on page one for all our key product categories."
+                        "Happy Expert transformed our online store. Our organic traffic increased by 187% in just 4 months, and we're now ranking on the first page for our most important keywords."
                     </div>
                     <div class="testimonial-author">
-                        <div class="author-avatar" style="background-image: url('https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80');"></div>
-                        <div>
-                            <h4>Sarah Johnson</h4>
-                            <p>Founder, FashionHub</p>
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Sarah Johnson" class="testimonial-avatar">
+                        <div class="author-details">
+                            <span class="author-name">Sarah Johnson</span>
+                            <span class="author-title">Fashion Boutique Owner</span>
                         </div>
                     </div>
                 </div>
                 
                 <div class="testimonial-card">
                     <div class="testimonial-text">
-                        "The team at HappyEcomPro SEO understands Shopify inside and out. They fixed technical issues we didn't even know we had and optimized our product pages for maximum visibility."
+                        "The team at Happy Expert truly understands Shopify SEO. They fixed technical issues we didn't even know we had and developed a content strategy that doubled our organic sales."
                     </div>
                     <div class="testimonial-author">
-                        <div class="author-avatar" style="background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80');"></div>
-                        <div>
-                            <h4>Michael Chen</h4>
-                            <p>CEO, TechGadgets</p>
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Michael Chen" class="testimonial-avatar">
+                        <div class="author-details">
+                            <span class="author-name">Michael Chen</span>
+                            <span class="author-title">Electronics Store Owner</span>
                         </div>
                     </div>
                 </div>
                 
                 <div class="testimonial-card">
                     <div class="testimonial-text">
-                        "After trying several SEO agencies, we finally found one that delivers real results. Our sales from organic search have increased by 230% since working with HappyEcomPro SEO."
+                        "Working with Happy Expert was a game-changer for our business. Their ongoing SEO support has helped us maintain our rankings and continue growing month after month."
                     </div>
                     <div class="testimonial-author">
-                        <div class="author-avatar" style="background-image: url('https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80');"></div>
-                        <div>
-                            <h4>Emma Rodriguez</h4>
-                            <p>Owner, HomeDecor Plus</p>
+                        <img src="https://images.unsplash.com/photo-1552058544-f2b08422138a?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Jessica Williams" class="testimonial-avatar">
+                        <div class="author-details">
+                            <span class="author-name">Jessica Williams</span>
+                            <span class="author-title">Home Decor Store Owner</span>
                         </div>
                     </div>
                 </div>
@@ -704,41 +789,56 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>HappyEcomPro SEO</h3>
-                    <p>Specialized SEO services for Shopify store owners. We help you rank higher, drive more traffic, and increase sales.</p>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Connect With Us</h3>
-                    <p><i class="fab fa-tiktok"></i> TikTok: @happyecompro</p>
-                    <p><i class="fab fa-whatsapp"></i> WhatsApp: +1 (369) 201-0268</p>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Follow Us</h3>
-                    <p><a href="https://www.tiktok.com/@happyecompro" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a></p>
-                    <p><a href="#"><i class="fab fa-instagram"></i> Instagram</a></p>
-                    <p><a href="#"><i class="fab fa-youtube"></i> YouTube</a></p>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Quick Links</h3>
-                    <p><a href="#home">Home</a></p>
-                    <p><a href="#services">Services</a></p>
-                    <p><a href="#about">About</a></p>
-                    <p><a href="#results">Results</a></p>
-                </div>
-            </div>
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="text-center">Ready to boost your Shopify store's visibility? Contact us for a free SEO audit and consultation.</p>
             
-            <div class="footer-bottom">
-                <p>&copy; 2023 HappyEcomPro SEO. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-</body>
-</html>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h3>Location</h3>
+                            <p>123 Ecommerce Street, Digital City, DC 10101</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h3>Email</h3>
+                            <p>info@happyexpert.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <h3>Phone</h3>
+                            <p>(555) 123-4567</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-shopify"></i>
+                        </div>
+                        <div>
+                            <h3>Shopify Experts</h3>
+                            <p>Certified Shopify Partner</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input
