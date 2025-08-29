@@ -1,14 +1,10 @@
-# Enhanced Happy Expert for eCommerce Website
 
-I've improved the website with a focus on your additional services, added more client reviews, and created a 5-star rating system to showcase your excellent work.
-
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Expert for eCommerce - Shopify SEO & Store Development</title>
+    <title>Happy Expert for eCommerce Website Design!</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         /* Global Styles */
@@ -19,20 +15,9 @@ I've improved the website with a focus on your additional services, added more c
             font-family: 'Poppins', sans-serif;
         }
         
-        :root {
-            --primary: #3498db;
-            --secondary: #e74c3c;
-            --accent: #9b59b6;
-            --dark: #2c3e50;
-            --light: #ecf0f1;
-            --background: #f8f9fa;
-            --text: #333333;
-        }
-        
         body {
             line-height: 1.6;
-            color: var(--text);
-            background-color: var(--background);
+            color: #333;
         }
         
         .container {
@@ -42,75 +27,65 @@ I've improved the website with a focus on your additional services, added more c
             padding: 0 20px;
         }
         
-        section {
-            padding: 80px 0;
-        }
-        
-        h1, h2, h3 {
-            margin-bottom: 20px;
-            color: var(--dark);
-        }
-        
-        p {
-            margin-bottom: 15px;
-        }
-        
         .btn {
             display: inline-block;
-            background: var(--primary);
+            background: #7e57c2;
             color: white;
             padding: 12px 30px;
-            border-radius: 5px;
+            border-radius: 30px;
             text-decoration: none;
             font-weight: 600;
             transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
         }
         
         .btn:hover {
-            background: #2980b9;
+            background: #5e35b1;
             transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
         }
         
-        .btn-secondary {
-            background: var(--secondary);
-        }
-        
-        .btn-secondary:hover {
-            background: #c0392b;
-        }
-        
-        .text-center {
-            text-align: center;
+        section {
+            padding: 80px 0;
         }
         
         .section-title {
             text-align: center;
             margin-bottom: 50px;
-            position: relative;
         }
         
-        .section-title:after {
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title h2::after {
             content: '';
-            display: block;
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
             width: 80px;
             height: 4px;
-            background: var(--primary);
-            margin: 15px auto;
+            background: #7e57c2;
             border-radius: 2px;
         }
         
         /* Header Styles */
         header {
             background: white;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
         }
         
-        .header-container {
+        nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -120,14 +95,10 @@ I've improved the website with a focus on your additional services, added more c
         .logo {
             display: flex;
             align-items: center;
-            font-size: 24px;
+            font-size: 1.8rem;
             font-weight: 700;
-            color: var(--primary);
+            color: #7e57c2;
             text-decoration: none;
-        }
-        
-        .logo span {
-            color: var(--secondary);
         }
         
         .logo img {
@@ -135,66 +106,65 @@ I've improved the website with a focus on your additional services, added more c
             margin-right: 10px;
         }
         
-        nav ul {
+        .nav-links {
             display: flex;
             list-style: none;
         }
         
-        nav ul li {
+        .nav-links li {
             margin-left: 30px;
         }
         
-        nav ul li a {
+        .nav-links a {
             text-decoration: none;
-            color: var(--text);
+            color: #333;
             font-weight: 500;
             transition: color 0.3s ease;
         }
         
-        nav ul li a:hover {
-            color: var(--primary);
+        .nav-links a:hover {
+            color: #7e57c2;
         }
         
         /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(52, 152, 219, 0.8), rgba(41, 128, 185, 0.8)), url('https://images.unsplash.com/photo-1563014959-7aaa83350992?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
-            background-size: cover;
-            background-position: center;
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
             color: white;
-            text-align: center;
             padding: 150px 0 100px;
-            margin-top: 80px;
+            text-align: center;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
         }
         
         .hero h1 {
             font-size: 3rem;
             margin-bottom: 20px;
-            color: white;
         }
         
         .hero p {
             font-size: 1.2rem;
-            max-width: 700px;
-            margin: 0 auto 30px;
+            margin-bottom: 30px;
         }
         
         /* Services Section */
         .services {
-            background: white;
+            background: #f8f9fa;
         }
         
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
-            margin-top: 50px;
         }
         
         .service-card {
             background: white;
             border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             transition: transform 0.3s ease;
         }
         
@@ -204,8 +174,18 @@ I've improved the website with a focus on your additional services, added more c
         
         .service-img {
             height: 200px;
-            background-size: cover;
-            background-position: center;
+            overflow: hidden;
+        }
+        
+        .service-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .service-card:hover .service-img img {
+            transform: scale(1.1);
         }
         
         .service-content {
@@ -213,34 +193,34 @@ I've improved the website with a focus on your additional services, added more c
         }
         
         .service-content h3 {
-            color: var(--primary);
+            margin-bottom: 15px;
+            color: #333;
         }
         
         /* Portfolio Section */
-        .portfolio {
-            background: linear-gradient(to right, #e8f4ff, #f1f8ff);
-        }
-        
         .portfolio-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
-            margin-top: 50px;
         }
         
         .portfolio-item {
             position: relative;
             border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             height: 250px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
         
-        .portfolio-img {
+        .portfolio-item img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             transition: transform 0.5s ease;
+        }
+        
+        .portfolio-item:hover img {
+            transform: scale(1.1);
         }
         
         .portfolio-overlay {
@@ -249,7 +229,7 @@ I've improved the website with a focus on your additional services, added more c
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(52, 152, 219, 0.9);
+            background: rgba(126, 87, 194, 0.8);
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -265,68 +245,67 @@ I've improved the website with a focus on your additional services, added more c
             opacity: 1;
         }
         
-        .portfolio-item:hover .portfolio-img {
-            transform: scale(1.1);
-        }
-        
         /* About Section */
         .about {
-            background: white;
+            background: #f8f9fa;
         }
         
         .about-content {
-            display: flex;
-            align-items: center;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
             gap: 50px;
+            align-items: center;
         }
         
-        .about-text {
-            flex: 1;
+        .about-text h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        
+        .about-text p {
+            margin-bottom: 20px;
         }
         
         .about-image {
-            flex: 1;
-            height: 400px;
-            background: url('https://images.unsplash.com/photo-1533750349088-cd871a92f312?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');
-            background-size: cover;
-            background-position: center;
             border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
         
-        /* Testimonials */
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        /* Testimonials Section */
         .testimonials {
-            background: linear-gradient(to right, #ffefef, #ffe6e6);
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: white;
+        }
+        
+        .testimonials .section-title h2 {
+            color: white;
         }
         
         .testimonial-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
-            margin-top: 50px;
         }
         
         .testimonial-card {
-            background: white;
-            padding: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
             border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
         
         .testimonial-text {
-            font-style: italic;
             margin-bottom: 20px;
-            position: relative;
-        }
-        
-        .testimonial-text:before {
-            content: """;
-            font-size: 60px;
-            color: var(--primary);
-            opacity: 0.2;
-            position: absolute;
-            top: -20px;
-            left: -10px;
+            font-style: italic;
         }
         
         .testimonial-author {
@@ -334,7 +313,7 @@ I've improved the website with a focus on your additional services, added more c
             align-items: center;
         }
         
-        .testimonial-avatar {
+        .testimonial-author img {
             width: 50px;
             height: 50px;
             border-radius: 50%;
@@ -342,102 +321,11 @@ I've improved the website with a focus on your additional services, added more c
             object-fit: cover;
         }
         
-        .author-details {
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .author-name {
-            font-weight: 600;
-            color: var(--primary);
-        }
-        
-        .author-title {
-            font-size: 0.9rem;
-            color: #777;
-        }
-        
-        .stars {
-            color: #FFD700;
-            margin: 10px 0;
-        }
-        
-        /* Process Section */
-        .process {
-            background: white;
-        }
-        
-        .process-steps {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 50px;
-            position: relative;
-        }
-        
-        .process-steps:before {
-            content: '';
-            position: absolute;
-            top: 40px;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background: #eee;
-            z-index: 1;
-        }
-        
-        .process-step {
-            text-align: center;
-            position: relative;
-            z-index: 2;
-            width: 25%;
-        }
-        
-        .step-number {
-            width: 80px;
-            height: 80px;
-            background: var(--primary);
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 30px;
-            font-weight: 700;
-            margin: 0 auto 20px;
-            position: relative;
-        }
-        
-        .step-number:after {
-            content: '';
-            position: absolute;
-            width: 70px;
-            height: 70px;
-            border: 2px solid var(--primary);
-            border-radius: 50%;
-            animation: pulse 2s infinite;
-        }
-        
-        @keyframes pulse {
-            0% {
-                transform: scale(1);
-                opacity: 1;
-            }
-            100% {
-                transform: scale(1.5);
-                opacity: 0;
-            }
-        }
-        
         /* Contact Section */
-        .contact {
-            background: linear-gradient(to right, #e8f4ff, #f1f8ff);
-        }
-        
-        .contact-grid {
+        .contact-content {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: 1fr 1fr;
             gap: 50px;
-            margin-top: 50px;
         }
         
         .contact-info {
@@ -449,52 +337,71 @@ I've improved the website with a focus on your additional services, added more c
         .contact-item {
             display: flex;
             align-items: center;
-            gap: 15px;
         }
         
-        .contact-icon {
-            width: 50px;
-            height: 50px;
-            background: var(--primary);
-            border-radius: 50%;
+        .contact-item i {
+            font-size: 1.5rem;
+            color: #7e57c2;
+            margin-right: 15px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
             display: flex;
             align-items: center;
             justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: #7e57c2;
             color: white;
-            font-size: 20px;
+            border-radius: 50%;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background: #5e35b1;
+            transform: translateY(-3px);
         }
         
         .contact-form {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
         }
         
         .form-group {
-            display: flex;
-            flex-direction: column;
-            gap: 5px;
+            margin-bottom: 20px;
         }
         
         .form-group label {
+            display: block;
+            margin-bottom: 5px;
             font-weight: 500;
         }
         
         .form-group input,
         .form-group textarea {
-            padding: 12px;
+            width: 100%;
+            padding: 12px 15px;
             border: 1px solid #ddd;
             border-radius: 5px;
-            font-size: 16px;
+            font-size: 1rem;
         }
         
         .form-group textarea {
             min-height: 150px;
+            resize: vertical;
         }
         
         /* Footer */
         footer {
-            background: var(--dark);
+            background: #333;
             color: white;
             padding: 50px 0 20px;
         }
@@ -502,13 +409,25 @@ I've improved the website with a focus on your additional services, added more c
         .footer-content {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-bottom: 30px;
+            gap: 40px;
+            margin-bottom: 40px;
         }
         
         .footer-column h3 {
-            color: white;
+            font-size: 1.2rem;
             margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background: #7e57c2;
         }
         
         .footer-column ul {
@@ -519,79 +438,49 @@ I've improved the website with a focus on your additional services, added more c
             margin-bottom: 10px;
         }
         
-        .footer-column ul li a {
+        .footer-column a {
             color: #ddd;
             text-decoration: none;
             transition: color 0.3s ease;
         }
         
-        .footer-column ul li a:hover {
-            color: var(--primary);
-        }
-        
-        .social-links {
-            display: flex;
-            gap: 15px;
-        }
-        
-        .social-links a {
-            color: white;
-            font-size: 20px;
-            transition: color 0.3s ease;
-        }
-        
-        .social-links a:hover {
-            color: var(--primary);
+        .footer-column a:hover {
+            color: #7e57c2;
         }
         
         .copyright {
             text-align: center;
             padding-top: 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-top: 1px solid #444;
         }
         
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .header-container {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            nav ul {
-                margin-top: 20px;
-                justify-content: center;
-                flex-wrap: wrap;
-            }
-            
-            nav ul li {
-                margin: 5px 10px;
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .about-content,
+            .contact-content {
+                grid-template-columns: 1fr;
             }
             
             .hero h1 {
-                font-size: 2.2rem;
+                font-size: 2.5rem;
             }
-            
-            .about-content {
-                flex-direction: column;
-            }
-            
-            .about-image {
-                width: 100%;
-                margin-top: 30px;
-            }
-            
-            .process-steps {
-                flex-direction: column;
-                align-items: center;
-                gap: 40px;
-            }
-            
-            .process-steps:before {
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
                 display: none;
             }
             
-            .process-step {
-                width: 100%;
+            .hero {
+                padding: 120px 0 80px;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
             }
         }
     </style>
@@ -599,17 +488,16 @@ I've improved the website with a focus on your additional services, added more c
 <body>
     <!-- Header -->
     <header>
-        <div class="container header-container">
-            <a href="#" class="logo">
-                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNDAgODAiPjxwYXRoIGZpbGw9IiM5OWYzZDMiIGQ9Ik0yMzMuMywzMC42YzAtNC4yLTMuNC03LjYtNy42LTcuNmMtNC4yLDAtNy42LDMuNC03LjYsNy42YzAsNC4yLDMuNCw3LjYsNy42LDcuNiBDMjI5LjksMzguMiwyMzMuMywzNC44LDIzMy4zLDMwLjZ6IE0yMjUuNywzMC42YzAtMi4yLTEuOC00LTQtNGMtMi4yLDAtNCwxLjgtNCw0YzAsMi4yLDEuOCw0LDQsNCBDMjIzLjksMzQuNiwyMjUuNywzMi44LDIyNS43LDMwLjZ6IE0yMzUuMyw0MC40bC0yLjUtMi44aC0yLjJ2Mi44aC0zLjFWMjNoNS4zYzIuOCwwLDUuMSwyLjMsNS4xLDUuMWMwLDIuMS0xLjMsMy45LTMuMiw0LjdsMi44LDMuNEwyMzUuMyw0MC40eiBNMjMwLjYsMjUuOGgtMi4ydjguNWgyLjJjMS4xLDAsMi0wLjksMi0yVjI3LjhDMjMyLjYsMjYuNywyMzEuNywyNS44LDIzMC42LDI1Ljh6Ii8+PHBhdGggZmlsbD0iIzVjNmJlNCIgZD0iTTE4OC4xLDI1LjhjLTUuNCwwLTkuOCw0LjQtOS44LDkuOGMwLDUuNCw0LjQsOS44LDkuOCw5LjhzOS44LTQuNCw5LjgtOS44IEMxOTcuOSwzMC4yLDE5My41LDI1LjgsMTg4LjEsMjUuOHogTTE4OC4xLDQwLjRjLTIuNiwwLTQuOC0yLjEtNC44LTQuOGMwLTIuNiwyLjEtNC44LDQuOC00LjhzNC44LDIuMSw0LjgsNC44IEMxOTIuOSwzOC4zLDE5MC44LDQwLjQsMTg4LjEsNDAuNHoiLz48cGF0aCBmaWxsPSIjNWM2YmU0IiBkPSJNMTYzLjcsMjUuOGMtNS40LDAtOS44LDQuNC05LjgsOS44YzAsNS40LDQuNCw5LjgsOS44LDkuOGM1LjQsMCw5LjgtNC40LDkuOC05LjggQzE3My41LDMwLjIsMTY5LjEsMjUuOCwxNjMuNywyNS44eiBNMTYzLjcsNDAuNGMtMi42LDAtNC44LTIuMS00LjgtNC44YzAtMi42LDIuMS00LjgsNC44LTQuOHM0LjgsMi4xLDQuOCw0LjggQzE2OC41LDM4LjMsMTY2LjQsNDAuNCwxNjMuNyw0MC40eiIvPjxwYXRoIGZpbGw9IiM1YzZiZTQiIGQ9Ik0xMzkuMiwyNS44Yy01LjQsMC05LjgsNC40LTkuOCw5LjhzNC40LDkuOCw5LjgsOS44YzUuNCwwLDkuOC00LjQsOS44LTkuOCBDMTQ5LDMwLjIsMTQ0LjYsMjUuOCwxMzkuMiwyNS44eiBNMTM5LjIsNDAuNGMtMi42LDAtNC44LTIuMS00LjgtNC44YzAtMi42LDIuMS00LjgsNC44LTQuOHM0LjgsMi4xLDQuOCw0LjggQzE0NCwzOC4zLDE0MS45LDQwLjQsMTM5LjIsNDAuNHoiLz48cGF0aCBmaWxsPSIjNWM2YmU0IiBkPSJNMTE0LjcsMjUuOGMtNS40LDAtOS44LDQuNC05LjgsOS44YzAsNS40LDQuNCw5LjgsOS44LDkuOGM1LjQsMCw5LjgtNC40LDkuOC05LjggQzEyNC41LDMwLjIsMTIwLjEsMjUuOCwxMTQuNywyNS44eiBNMTE0LjcsNDAuNGMtMi42LDAtNC44LTIuMS00LjgtNC44YzAtMi42LDIuMS00LjgsNC44LTQuOHM0LjgsMi4xLDQuOCw0LjggQzExOS41LDM4LjMsMTE3LjQsNDAuNCwxMTQuNyw0MC40eiIvPjxwYXRoIGZpbGw9IiM1YzZiZTQiIGQ9Ik05MC4zLDI1LjhjLTUuNCwwLTkuOCw0LjQtOS44LDkuOGMwLDUuNCw0LjQsOS44LDkuOCw5LjhjNS40LDAsOS44LTQuNCw5LjgtOS44IEMxMDAuMSwzMC4yLDk1LjcsMjUuOCw5MC4zLDI1Ljh6IE05MC4zLDQwLjRjLTIuNiwwLTQuOC0yLjEtNC44LTQuOGMwLTIuNiwyLjEtNC44LDQuOC00LjhzNC44LDIuMSw0LjgsNC44IEM5NS4xLDM4LjMsOTIuOSw0MC40LDkwLjMsNDAuNHoiLz48cGF0aCBmaWxsPSIjNWM2YmU0IiBkPSJNNjUuOCwyNS44Yy01LjQsMC05LjgsNC40LTkuOCw5LjhjMCw1LjQsNC40LDkuOCw5LjgsOS44YzUuNCwwLDkuOC00LjQsOS44LTkuOCBDNzUuNiwzMC4yLDcxLjIsMjUuOCw2NS44LDI1Ljh6IE02NS44LDQwLjRjLTIuNiwwLTQuOC0yLjEtNC44LTQuOGMwLTIuNiwyLjEtNC44LDQuOC00LjhzNC44LDIuMSw0LjgsNC44IEM3MC42LDM4LjMsNjguNSw0MC40LDY1LjgsNDAuNHoiLz48cGF0aCBmaWxsPSIjNWM2YmU0IiBkPSJNNDEuMywyNS44Yy01LjQsMC05LjgsNC40LTkuOCw5LjhjMCw1LjQsNC40LDkuOCw5LjgsOS44YzUuNCwwLDkuOC00LjQsOS44LTkuOCBDNTEuMSwzMC4yLDQ2LjcsMjUuOCw0MS4zLDI1Ljh6IE00MS4zLDQwLjRjLTIuNiwwLTQuOC0yLjEtNC44LTQuOGMwLTIuNiwyLjEtNC44LDQuOC00LjhzNC44LDIuMSw0LjgsNC44IEM0Ni4xLDM4LjMsNDQsNDAuNCw0MS4zLDQwLjR6Ii8+PHBhdGggZmlsbD0iIz5mYzZkMyIgZD0iTTE2LjgsMjUuOGMtNS40LDAtOS44LDQuNC05LjgsOS44YzAsNS40LDQuNCw5LjgsOS44LDkuOGM1LjQsMCw5LjgtNC40LDkuOC05LjggQzI2LjYsMzAuMiwyMjIuMiwyNS44LDE2LjgsMjUuOHogTTE2LjgsNDAuNGMtMi42LDAtNC44LTIuMS00LjgtNC44YzAtMi42LDIuMS00LjgsNC44LTQuOHM0LjgsMi4xLDQuOCw0LjggQzIxLjYsMzguMywxOS41LDQwLjQsMTYuOCw0MC40eiIvPjwvc3ZnPg==" alt="Shopify Expert">
-                Happy <span>Expert</span>
-            </a>
+        <div class="container">
             <nav>
-                <ul>
+                <a href="#" class="logo">
+                    <img src="https://cdn-icons-png.flaticon.com/512/8370/8370536.png" alt="Shopify Logo">
+                    Happy Expert
+                </a>
+                <ul class="nav-links">
                     <li><a href="#services">Services</a></li>
-                    <li><a href="#portfolio">Work</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
                     <li><a href="#about">About</a></li>
-                    <li><a href="#process">Process</a></li>
                     <li><a href="#testimonials">Testimonials</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
@@ -620,65 +508,47 @@ I've improved the website with a focus on your additional services, added more c
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1>Complete Shopify Solutions: SEO, Design & Development</h1>
-            <p>We help eCommerce businesses build, redesign, and optimize Shopify stores to increase visibility, drive traffic, and generate more sales.</p>
-            <a href="#contact" class="btn">Get a Free Consultation</a>
-            <a href="#services" class="btn btn-secondary">Our Services</a>
+            <div class="hero-content">
+                <h1>Expert eCommerce Website Design for Shopify</h1>
+                <p>Transform your Shopify store with our professional design services that drive sales and enhance user experience.</p>
+                <a href="#contact" class="btn">Get Started Today</a>
+            </div>
         </div>
     </section>
 
     <!-- Services Section -->
     <section id="services" class="services">
         <div class="container">
-            <h2 class="section-title">Our Services</h2>
-            <p class="text-center">Comprehensive Shopify solutions tailored for your eCommerce success</p>
-            
+            <div class="section-title">
+                <h2>Our Services</h2>
+                <p>We offer a comprehensive range of Shopify design and development services</p>
+            </div>
             <div class="services-grid">
                 <div class="service-card">
-                    <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1563014959-7aaa83350992?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Shopify Store Design">
+                    </div>
                     <div class="service-content">
-                        <h3>Shopify SEO Optimization</h3>
-                        <p>Comprehensive SEO strategies tailored for Shopify stores to improve search rankings and drive organic traffic.</p>
+                        <h3>Shopify Store Design</h3>
+                        <p>Custom Shopify store designs that reflect your brand and convert visitors into customers.</p>
                     </div>
                 </div>
-                
                 <div class="service-card">
-                    <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1563014959-7aaa83350992?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Theme Customization">
+                    </div>
                     <div class="service-content">
-                        <h3>Shopify Store Development</h3>
-                        <p>Custom Shopify store development from scratch with responsive design and optimized user experience.</p>
+                        <h3>Theme Customization</h3>
+                        <p>Tailor-made theme modifications to make your store stand out from the competition.</p>
                     </div>
                 </div>
-                
                 <div class="service-card">
-                    <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
-                    <div class="service-content">
-                        <h3>Shopify Store Redesign</h3>
-                        <p>Transform your existing Shopify store with modern design, improved navigation, and better conversion rates.</p>
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Conversion Optimization">
                     </div>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1556742044-3f034d4fb380?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
                     <div class="service-content">
-                        <h3>Dropshipping Store Setup</h3>
-                        <p>Complete dropshipping Shopify store setup with product import, automation, and supplier integration.</p>
-                    </div>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
-                    <div class="service-content">
-                        <h3>Conversion Rate Optimization</h3>
-                        <p>Increase your store's conversion rate through A/B testing, UX improvements, and checkout optimization.</p>
-                    </div>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
-                    <div class="service-content">
-                        <h3>Ongoing Maintenance & Support</h3>
-                        <p>Regular updates, security monitoring, and technical support to keep your store running smoothly.</p>
+                        <h3>Conversion Optimization</h3>
+                        <p>Data-driven optimizations to increase your store's conversion rate and maximize revenue.</p>
                     </div>
                 </div>
             </div>
@@ -688,31 +558,51 @@ I've improved the website with a focus on your additional services, added more c
     <!-- Portfolio Section -->
     <section id="portfolio" class="portfolio">
         <div class="container">
-            <h2 class="section-title">Our Work</h2>
-            <p class="text-center">See how we've helped Shopify stores improve their search visibility and sales</p>
-            
+            <div class="section-title">
+                <h2>Our Work</h2>
+                <p>Check out some of our successful Shopify store designs</p>
+            </div>
             <div class="portfolio-grid">
                 <div class="portfolio-item">
-                    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Fashion Store SEO Results" class="portfolio-img">
+                    <img src="https://images.unsplash.com/photo-1556155092-490a1ba16284?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Fashion Store">
                     <div class="portfolio-overlay">
-                        <h3>Fashion Boutique</h3>
-                        <p>Increased organic traffic by 187% and improved conversion rate by 32% in 4 months.</p>
+                        <h3>Fashion Store</h3>
+                        <p>Complete redesign that increased conversions by 42%</p>
                     </div>
                 </div>
-                
                 <div class="portfolio-item">
-                    <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Coffee Shop SEO Results" class="portfolio-img">
-                    <div class="portfolio-overlay">
-                        <h3>Artisan Coffee Shop</h3>
-                        <p>Grew organic revenue by 245% and achieved first-page rankings for 15+ competitive keywords.</p>
-                    </div>
-                </div>
-                
-                <div class="portfolio-item">
-                    <img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Electronics Store SEO Results" class="portfolio-img">
+                    <img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Electronics Store">
                     <div class="portfolio-overlay">
                         <h3>Electronics Store</h3>
-                        <p>Improved overall search visibility by 68% and reduced bounce rate by 41%.</p>
+                        <p>Custom Shopify theme with advanced product filters</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1595341888016-a392ef81b7de?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Home Decor Store">
+                    <div class="portfolio-overlay">
+                        <h3>Home Decor Store</h3>
+                        <p>Mobile-first design that improved mobile conversions by 67%</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1595428774223-ef52624120d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Beauty Products">
+                    <div class="portfolio-overlay">
+                        <h3>Beauty Products</h3>
+                        <p>Subscription-based eCommerce solution with recurring payments</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Food & Beverage">
+                    <div class="portfolio-overlay">
+                        <h3>Food & Beverage</h3>
+                        <p>Local delivery integration with real-time inventory management</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1605733513597-a8f8341084e6?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Fitness Store">
+                    <div class="portfolio-overlay">
+                        <h3>Fitness Store</h3>
+                        <p>Custom workout planner integration with eCommerce functionality</p>
                     </div>
                 </div>
             </div>
@@ -722,15 +612,17 @@ I've improved the website with a focus on your additional services, added more c
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
-            <h2 class="section-title">Why Choose Happy Expert?</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>We are a team of dedicated Shopify experts with extensive experience in building, redesigning, and optimizing Shopify stores for maximum performance. Our approach combines technical expertise with creative strategies to deliver measurable results.</p>
-                    <p>Unlike generic agencies, we understand the unique challenges and opportunities that come with the Shopify platform. We know how to leverage Shopify's built-in features while implementing advanced techniques to give you a competitive edge.</p>
-                    <p>Our mission is simple: to help eCommerce businesses thrive by creating stunning stores, increasing their organic visibility, and driving qualified traffic that converts into sales.</p>
-                    <a href="#contact" class="btn">Work With Us</a>
+                    <h2>Why Choose Happy Expert?</h2>
+                    <p>With over 7 years of experience in Shopify design and development, we understand what it takes to create successful online stores that not only look beautiful but also drive sales.</p>
+                    <p>Our team of experts stays up-to-date with the latest eCommerce trends and technologies to ensure your store remains competitive in today's market.</p>
+                    <p>We take a collaborative approach, working closely with you to understand your business goals and target audience to create a tailored solution that delivers results.</p>
+                    <a href="#contact" class="btn">Get in Touch</a>
                 </div>
-                <div class="about-image"></div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1533750349088-cd871a92f312?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Our Team">
+                </div>
             </div>
         </div>
     </section>
@@ -738,162 +630,46 @@ I've improved the website with a focus on your additional services, added more c
     <!-- Testimonials Section -->
     <section id="testimonials" class="testimonials">
         <div class="container">
-            <h2 class="section-title">What Our Clients Say</h2>
-            <p class="text-center">Hear from Shopify store owners who have experienced success with our services</p>
-            
+            <div class="section-title">
+                <h2>Client Testimonials</h2>
+                <p>See what our clients have to say about our work</p>
+            </div>
             <div class="testimonial-grid">
                 <div class="testimonial-card">
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
                     <div class="testimonial-text">
-                        "Happy Expert transformed our online store. Our organic traffic increased by 187% in just 4 months, and we're now ranking on the first page for our most important keywords. Their Shopify expertise is unmatched!"
+                        <p>"Happy Expert transformed our Shopify store completely. Our conversion rate increased by 35% within the first month after the redesign!"</p>
                     </div>
                     <div class="testimonial-author">
-                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Sarah Johnson" class="testimonial-avatar">
-                        <div class="author-details">
-                            <span class="author-name">Sarah Johnson</span>
-                            <span class="author-title">Fashion Boutique Owner</span>
+                        <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Sarah Johnson">
+                        <div>
+                            <h4>Sarah Johnson</h4>
+                            <p>CEO, Fashion Boutique</p>
                         </div>
                     </div>
                 </div>
-                
                 <div class="testimonial-card">
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
                     <div class="testimonial-text">
-                        "The team at Happy Expert built our dropshipping store from scratch and it's been generating sales from day one. They truly understand Shopify SEO and conversion optimization. Highly recommended!"
+                        <p>"The team at Happy Expert understood our vision perfectly. They delivered a stunning design that captures our brand essence while optimizing for conversions."</p>
                     </div>
                     <div class="testimonial-author">
-                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Michael Chen" class="testimonial-avatar">
-                        <div class="author-details">
-                            <span class="author-name">Michael Chen</span>
-                            <span class="author-title">Electronics Store Owner</span>
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael Chen">
+                        <div>
+                            <h4>Michael Chen</h4>
+                            <p>Founder, TechGadgets</p>
                         </div>
                     </div>
                 </div>
-                
                 <div class="testimonial-card">
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
                     <div class="testimonial-text">
-                        "After struggling with our Shopify store for years, Happy Expert completely redesigned it and implemented SEO best practices. Our sales have increased by 150% in just 3 months. Worth every penny!"
+                        <p>"Working with Happy Expert was seamless. Their attention to detail and technical expertise helped us create a unique shopping experience for our customers."</p>
                     </div>
                     <div class="testimonial-author">
-                        <img src="https://images.unsplash.com/photo-1552058544-f2b08422138a?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Jessica Williams" class="testimonial-avatar">
-                        <div class="author-details">
-                            <span class="author-name">Jessica Williams</span>
-                            <span class="author-title">Home Decor Store Owner</span>
+                        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Jessica Williams">
+                        <div>
+                            <h4>Jessica Williams</h4>
+                            <p>Owner, HomeDecor Plus</p>
                         </div>
                     </div>
-                </div>
-                
-                <div class="testimonial-card">
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <div class="testimonial-text">
-                        "I was skeptical about investing in SEO, but Happy Expert delivered incredible results. Our organic traffic tripled in 6 months, and we're now ranking for competitive keywords we never thought possible."
-                    </div>
-                    <div class="testimonial-author">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="David Miller" class="testimonial-avatar">
-                        <div class="author-details">
-                            <span class="author-name">David Miller</span>
-                            <span class="author-title">Fitness Equipment Store</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="testimonial-card">
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <div class="testimonial-text">
-                        "The Shopify store redesign by Happy Expert completely transformed our business. The new design is not only beautiful but also converts much better. Our bounce rate decreased by 45% and sales increased by 80%."
-                    </div>
-                    <div class="testimonial-author">
-                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Amanda Roberts" class="testimonial-avatar">
-                        <div class="author-details">
-                            <span class="author-name">Amanda Roberts</span>
-                            <span class="author-title">Beauty Products Store</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="testimonial-card">
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <div class="testimonial-text">
-                        "Happy Expert set up our dropshipping business on Shopify and it's been running smoothly ever since. They handled everything from supplier integration to SEO. We started making profits within the first month!"
-                    </div>
-                    <div class="testimonial-author">
-                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="James Wilson" class="testimonial-avatar">
-                        <div class="author-details">
-                            <span class="author-name">James Wilson</span>
-                            <span class="author-title">Home Gadgets Store</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Process Section -->
-    <section id="process" class="process">
-        <div class="container">
-            <h2 class="section-title">Our Process</h2>
-            <p class="text-center">A structured approach to delivering exceptional results for your Shopify store</p>
-            
-            <div class="process-steps">
-                <div class="process-step">
-                    <div class="step-number">1</div>
-                    <h3>Discovery & Analysis</h3>
-                    <p>We thoroughly analyze your business, competitors, and industry to develop a customized strategy.</p>
-                </div>
-                
-                <div class="process-step">
-                    <div class="step-number">2</div>
-                    <h3>Implementation</h3>
-                    <p>Our team executes the plan, whether it's building, redesigning, or optimizing your Shopify store.</p>
-                </div>
-                
-                <div class="process-step">
-                    <div class="step-number">3</div>
-                    <h3>Testing & Quality Assurance</h3>
-                    <p>We rigorously test everything to ensure optimal performance and user experience.</p>
-                </div>
-                
-                <div class="process-step">
-                    <div class="step-number">4</div>
-                    <h3>Launch & Optimization</h3>
-                    <p>We launch your store and continue to optimize based on data and performance metrics.</p>
                 </div>
             </div>
         </div>
@@ -902,86 +678,57 @@ I've improved the website with a focus on your additional services, added more c
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <p class="text-center">Ready to transform your Shopify store? Contact us for a free consultation and quote.</p>
-            
-            <div class="contact-grid">
+            <div class="section-title">
+                <h2>Get In Touch</h2>
+                <p>Ready to transform your Shopify store? Contact us today!</p>
+            </div>
+            <div class="contact-content">
                 <div class="contact-info">
                     <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
+                        <i class="fas fa-envelope"></i>
                         <div>
-                            <h3>Location</h3>
-                            <p>123 Ecommerce Street, Digital City, DC 10101</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div>
-                            <h3>Email</h3>
+                            <h3>Email Us</h3>
                             <p>info@happyexpert.com</p>
                         </div>
                     </div>
-                    
                     <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
+                        <i class="fas fa-phone"></i>
                         <div>
-                            <h3>Phone</h3>
-                            <p>(555) 123-4567</p>
+                            <h3>Call Us</h3>
+                            <p>+1 (555) 123-4567</p>
                         </div>
                     </div>
-                    
                     <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fab fa-shopify"></i>
-                        </div>
+                        <i class="fas fa-map-marker-alt"></i>
                         <div>
-                            <h3>Shopify Experts</h3>
-                            <p>Certified Shopify Partner</p>
+                            <h3>Location</h3>
+                            <p>123 Design Street, Creative City, 10001</p>
                         </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://tiktok.com/@Happyecompro" target="_blank"><i class="fab fa-tiktok"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
-                
                 <div class="contact-form">
-                    <div class="form-group">
-                        <label for="name">Your Name</label>
-                        <input type="text" id="name" placeholder="Enter your name">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="email">Your Email</label>
-                        <input type="email" id="email" placeholder="Enter your email">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="store">Your Shopify Store URL (if existing)</label>
-                        <input type="text" id="store" placeholder="Enter your store URL">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="service">Service Needed</label>
-                        <select id="service" class="form-control">
-                            <option value="">Select a service</option>
-                            <option value="seo">SEO Optimization</option>
-                            <option value="build">New Store Build</option>
-                            <option value="redesign">Store Redesign</option>
-                            <option value="dropshipping">Dropshipping Setup</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="message">Your Message</label>
-                        <textarea id="message" placeholder="How can we help you?"></textarea>
-                    </div>
-                    
-                    <button class="btn">Send Message</button>
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -993,71 +740,43 @@ I've improved the website with a focus on your additional services, added more c
             <div class="footer-content">
                 <div class="footer-column">
                     <h3>Happy Expert</h3>
-                    <p>Specialized Shopify solutions for eCommerce businesses. We help build, redesign, and optimize stores for maximum performance and sales.</p>
+                    <p>Expert eCommerce website design services for Shopify store owners. We help you create stunning, high-converting online stores.</p>
                 </div>
-                
-                <div class="footer-column">
-                    <h3>Services</h3>
-                    <ul>
-                        <li><a href="#services">Shopify SEO</a></li>
-                        <li><a href="#services">Store Development</a></li>
-                        <li><a href="#services">Store Redesign</a></li>
-                        <li><a href="#services">Dropshipping Setup</a></li>
-                        <li><a href="#services">Conversion Optimization</a></li>
-                    </ul>
-                </div>
-                
                 <div class="footer-column">
                     <h3>Quick Links</h3>
                     <ul>
                         <li><a href="#services">Services</a></li>
-                        <li><a href="#portfolio">Our Work</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
                         <li><a href="#about">About Us</a></li>
                         <li><a href="#testimonials">Testimonials</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
-                
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#">Shopify Store Design</a></li>
+                        <li><a href="#">Theme Customization</a></li>
+                        <li><a href="#">Conversion Optimization</a></li>
+                        <li><a href="#">Shopify SEO</a></li>
+                        <li><a href="#">Maintenance & Support</a></li>
+                    </ul>
+                </div>
                 <div class="footer-column">
                     <h3>Connect With Us</h3>
                     <div class="social-links">
+                        <a href="https://tiktok.com/@Happyecompro" target="_blank"><i class="fab fa-tiktok"></i></a>
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
                         <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-shopify"></i></a>
                     </div>
-                    <p class="verified">✓ Verified Shopify Experts</p>
                 </div>
             </div>
-            
             <div class="copyright">
-                <p>&copy; 2023 Happy Expert for eCommerce. All rights reserved.</p>
+                <p>&copy; 2023 Happy Expert for eCommerce Website Design. All rights reserved.</p>
             </div>
         </div>
     </footer>
 </body>
 </html>
-```
-
-## Key Improvements
-
-1. **Expanded Services Section**: Added services for Shopify store building, redesign, and dropshipping setup
-2. **Enhanced Testimonials**: Added more client reviews with 5-star ratings
-3. **Improved Visual Design**: 
-   - Added gradient backgrounds for visual interest
-   - Enhanced color scheme with better contrast
-   - Improved section spacing and typography
-
-4. **Shopify Integration**:
-   - Added Shopify logo in the header
-   - Included Shopify branding throughout the site
-   - Added "Verified Shopify Experts" badge
-
-5. **Portfolio Section**: Added a dedicated section to showcase your work with hover effects
-
-6. **Process Section**: Clearly outlined your working process to build trust with potential clients
-
-7. **Enhanced Contact Form**: Added a service selection dropdown to capture specific client needs
-
-The website now better represents your full range of services and showcases your expertise with Shopify store development, redesign, and SEO optimization.
